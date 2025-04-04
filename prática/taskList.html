@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <script src="taskList.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-style: oblique;
+        }
+    </style>
 </head>
 <body>
     <h1>Lista de tarefas</h1>
-    <input type="text" id="iTask" placeholder="adicione sua tarefa...">
-    <button id="addTask">enviar</button>
-    <ul id="taskList">
-
-    </ul>
+    <div>
+        <input type="text" id="iTask" placeholder="adicione sua tarefa...">
+        <button id="addTask">enviar</button>
+        <ul id="taskList">
+    
+        </ul>
+    </div>
 </body>
 </html>
