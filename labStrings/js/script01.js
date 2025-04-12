@@ -23,6 +23,7 @@ const imprimir = (lista,seletor) =>{
         document.querySelector(seletor).innerHTML += lista[i] + " "
     }
 }
+
 const questao1 = () => {
     //1 recuperar a frase digitada
     let listaFrase = getValue("#frase").split(" ")
