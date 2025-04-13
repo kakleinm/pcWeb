@@ -26,5 +26,5 @@ botao.onclick = function() {
     if (nivel == "Senha moderada.") obj.style.color = "orange"
     if (nivel == "Senha forte.") obj.style.color = "green"
     
-    obj.innerHTML += nivel
+    obj.innerHTML = nivel
 }

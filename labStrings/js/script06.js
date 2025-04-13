@@ -24,5 +24,5 @@ botao.onclick = function() {
     let data = getValue("#input").split("/")
     let obj = document.querySelector("#resultado")
     data = mesExtenso(data)
-    obj.innerHTML += `Você nasceu no dia ${data}.`
+    obj.innerHTML = `Você nasceu no dia ${data}.`
 }

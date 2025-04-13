@@ -18,5 +18,5 @@ botao.onclick = function() {
     let tamTexto = texto.length
     texto = acharVogais(texto, tamTexto)
     let div = document.querySelector("#resultado1")
-    div.innerHTML += texto
+    div.innerHTML = texto
 }
