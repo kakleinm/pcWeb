@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/estilo.css">
-    <title>PCWeb2022 - Atividade de Recuperação 1</title>
+    <title>PCWeb2025 - Teste 1</title>
     <style>
         * {
             font-family: Roboto, Helvetica, sans-serif;
@@ -131,7 +130,7 @@
 
 <body>
     <header>
-        <img src="/images/logo.jpg " alt="Centro Federal de Educação Tecnológica do Rio de Janeiro Celso Suckow da Fonseca - CEFET/RJ">
+        <img src="https://www.cefet-rj.br/arquivos_download/logo_cefet__home_site.jpg" alt="Centro Federal de Educação Tecnológica do Rio de Janeiro Celso Suckow da Fonseca - CEFET/RJ">
         <h1>Centro Federal de Educação Tecnológica do Rio de Janeiro - Celso Suckow da Fonseca</h1>
         <h3>Campus Nova Friburgo</h3>
         <h4>Curso Técnico em Informática</h4>
@@ -430,6 +429,67 @@
             edita(lances[i - 1], ".face-ocorr-" + i)
             edita(frequencia[i - 1].toFixed(2) + "%", ".face-freq-" + i)
         }
+    })
+
+    /*
+        QUESTÃO 04
+    */
+
+    const btnAddNome = document.querySelector("#q04-add")
+
+    const getNome = () => document.querySelector("#q04-nome").value
+
+    const insereNome = nome => {
+        const listaNomes = document.querySelector("#q04-nomes")
+    }
+
+    const inverteNome = nome => {
+        let nomeInvertido = ""
+        let tam = nome.length
+        for (let i = tam - 1; i >= 0; i--) {
+            nomeInvertido += nome[i]
+        }
+        return nomeInvertido
+    }
+
+    btnAddNome.addEventListener("click", () => {
+        const listaNomes = document.querySelector("#q04-nomes")
+        if(getNome())
+            listaNomes.innerHTML += `<li>${getNome()}</li>`
+    })
+
+    btn04.addEventListener("click", ()=>{
+        const liNomesDigitados = document.querySelectorAll("#q04-nomes li")
+        const listaInvertido = document.querySelector("#q04-nomes-invertidos")
+
+        for (let i = 0; i < liNomesDigitados.length; i++) {
+            const nome = liNomesDigitados[i].textContent
+            const nomeInvertido = inverteNome(nome)
+            listaInvertido.innerHTML += `<li>${nomeInvertido}</li>`
+        }
+    })
+
+    /*
+        QUESTÃO 05
+    */
+
+    const getPalavra = () => document.querySelector("#q05-palavra").value
+
+    const verificaPalindromo = (palavra) => {
+        ehPalindromo = false
+        for (let i = 1; i <= palavra.length; i++) {
+            if (palavra[i - 1] != palavra[palavra.length - i]) ehPalindromo = false
+            else if (palavra[i - 1] == palavra[palavra.length - i]) ehPalindromo = true
+        }
+        return ehPalindromo
+    }
+    btn05.addEventListener("click", () => {
+        const palavra = getPalavra()
+        const resp = document.querySelector("#q05-result")
+        if(palavra)
+            resp.innerHTML = `A palavra ${palavra} 
+                ${(verificaPalindromo(palavra))?"é":"não é"} 
+                um palíndromo`
     })
 </script>
 
