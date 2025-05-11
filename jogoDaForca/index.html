@@ -7,11 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo da Forca</title>
   <script src="script.js" defer></script>
+  <style>
+    body {
+      text-align: center;
+    }
+    #executa {
+      margin-bottom: 15px;
+    }
+
+    #letra {
+      text-transform: uppercase;
+      width: 10px;
+    }
+
+    #resposta {
+      border: 1px solid black;
+      width: 300px;
+      height: 40px;
+      padding: 6px;
+      margin: 0 auto;
+    }
+
+    #img {
+      max-width: 400px;
+      max-height: 300px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Jogo da Forca</h1>
-  <input type="text" id="letra"><br>
+  <img src="img/1.jpg" id="img"><br>
+  <input type="text" id="letra">
   <button id="executa">Enviar</button>
   <p id="resposta"></p>
 </body>
