@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        li.concluida {
+            text-decoration: line-through;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerenciador de Tarefas</h1>
+    <input type="text" id="descricaoTarefa" placeholder="Digite a descrição da tarefa">
+    <button id="btnAdicionar">Adicionar Tarefa</button>
+    <ul id="listaTarefas"></ul>
+    <footer>
+        <p>Total: <span id="totalTarefas">0</span> | Pendentes: <span id="tarefasPendentes">0</span> | Concluídas: <span id="tarefasConcluidas">0</span></p>
+        <button id="btnRemoverConcluidas">Remover Concluídas</button>
+    </footer>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
